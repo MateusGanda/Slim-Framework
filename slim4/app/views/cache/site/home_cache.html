@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/site/styles.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+    <div>
+        <a href="/" class="btn btn-success btn-sm">Home</a>
+    </div>
+    <div>
+         Bem vindo, visitante
+        <a href="/login" class="btn btn-warning btn-sm">Login</a>
+            </div>
+</div>        
+<h2>Home</h2>
+
+
+<a href="/user/create" class="btn btn-info">Create</a>
+
+
+
+<ul>
+    
+    <li>
+    Alexandre Eduardo Cardoso
+    <a href="/user/edit/1" class="btn btn-success">Editar</a>
+    <form action="/user/delete/1" method="post">
+        <input type="hidden" name="_METHOD" value="DELETE">
+        <button type="submit" class="btn btn-danger">Deletar</button>
+    </form>
+    </li>
+
+    
+    <li>
+    Alexandre Cardoso
+    <a href="/user/edit/2" class="btn btn-success">Editar</a>
+    <form action="/user/delete/2" method="post">
+        <input type="hidden" name="_METHOD" value="DELETE">
+        <button type="submit" class="btn btn-danger">Deletar</button>
+    </form>
+    </li>
+
+    
+    <li>
+    Maria Sandra
+    <a href="/user/edit/3" class="btn btn-success">Editar</a>
+    <form action="/user/delete/3" method="post">
+        <input type="hidden" name="_METHOD" value="DELETE">
+        <button type="submit" class="btn btn-danger">Deletar</button>
+    </form>
+    </li>
+
+    
+    <li>
+    Joana Santos
+    <a href="/user/edit/4" class="btn btn-success">Editar</a>
+    <form action="/user/delete/4" method="post">
+        <input type="hidden" name="_METHOD" value="DELETE">
+        <button type="submit" class="btn btn-danger">Deletar</button>
+    </form>
+    </li>
+
+    
+    <li>
+    José Santos
+    <a href="/user/edit/5" class="btn btn-success">Editar</a>
+    <form action="/user/delete/5" method="post">
+        <input type="hidden" name="_METHOD" value="DELETE">
+        <button type="submit" class="btn btn-danger">Deletar</button>
+    </form>
+    </li>
+
+    </ul>
+
+        footer    </div>
+</body>
+</html>

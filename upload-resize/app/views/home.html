@@ -1,0 +1,45 @@
+{% extends 'master.html' %}
+
+{% block master %}
+
+<h2>Lista de users</h2>
+
+<form action="">
+    <input type="text" name="s" class="form-control" placeholder="Buscar user">
+</form>
+
+<br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Title</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td><a href="/user/edit/{{ user.id }}" class="btn btn-success">Editar</a></td>
+                <td><a href="/user/delete/{{ user.id }}" class="btn btn-danger">Deletar</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+    <tbody>
+        <tr>
+            <td>{{ links | raw }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+
+
+
+{% endblock %}

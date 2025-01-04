@@ -1,0 +1,30 @@
+{% extends 'site/master.html' %}
+
+{% block site %}
+    
+	<h2>Lista de posts do portal</h2>
+
+	{% for post in posts %}
+	    
+	 <div class="well">
+	      <div class="media">
+	      	<a class="pull-left" href="#">
+	    		<img class="media-object" src="{{ post.postPhoto }}" width="480">
+	  		</a>
+	  		<div class="media-body">
+	    		<h4 class="media-heading">{{ post.title }}</h4>
+	          <p class="text-right">Por {{ post.name }}</p>
+	          	<p>
+                    {{ post.description }}
+            
+					<a href="/post/{{ post.slug }}">ver mais...</a>
+	          	</p>
+	          	<ul class="list-inline list-unstyled">
+	  				<li><span><i class="glyphicon glyphicon-calendar"></i>{{ post.created_at | date('d/m/Y H:i:s') }}, {{ timeAgo(post.created_at) }} </span></li>
+				</ul>
+	       </div>
+	    </div>
+	  </div>
+	{% endfor %}
+
+{% endblock %}

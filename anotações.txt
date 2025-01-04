@@ -1,0 +1,1 @@
+php -S localhost:5000 -t "public" ou php -S localhost:8888 -t "public" -> PARA ABRIR O SERVER

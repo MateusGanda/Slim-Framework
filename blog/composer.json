@@ -1,0 +1,19 @@
+{
+    "require": {
+        "slim/slim": "^3.9",
+        "twig/twig": "^2.4",
+        "dopesong/slim-whoops": "^2.2",
+        "phpmailer/phpmailer": "^6.0",
+        "intervention/image": "^2.4",
+        "nesbot/carbon": "^3.8",
+        "twig/string-extra": "^3.7"
+    },
+    "autoload":{
+        "psr-4":{
+            "app\\":"app"
+        },
+        "files":[
+            "app/functions/helpers.php"
+        ]
+    }
+}

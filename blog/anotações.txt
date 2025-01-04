@@ -1,0 +1,1 @@
+{{ post.description | truncate(200) }} O truncate(200) estava dando erro na views/site/home.html por isso so deixei {{ post.description }}

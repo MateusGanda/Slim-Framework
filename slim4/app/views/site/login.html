@@ -1,0 +1,22 @@
+{% extends "site/master.html" %}
+
+{% block content %}
+
+<h2>Login</h2>
+
+{% if logged_in %} 
+    Você já está logado
+{% else %}
+<form action="/login" method="post">
+    <input type="text" name="email" class="form-control" value="alecar2007@gmail.com"/>
+    {{ messages['email']['message']| message(messages['email']['alert'])|raw}}
+    <br>
+    <input type="password" name="password" class="form-control" value="123"/>
+    {{ messages['password']['message']| message(messages['password']['alert'])|raw}}
+    <br>
+    
+    <button type="submit" class="btn btn-info" id="btn-create">Logar</button>
+</form>
+{% endif %}
+
+{% endblock %}

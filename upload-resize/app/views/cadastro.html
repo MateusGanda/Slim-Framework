@@ -1,0 +1,34 @@
+{% extends 'master.html' %}
+
+{% block master %}
+
+	<h2>Cadastro - Sistema de validação</h2>
+    
+	<hr>
+
+	{{ message('message') }}
+
+	<form action="/cadastro/store" method="post">
+		 <div class="form-group">
+			<label for="">Name</label>
+			<input type="text" name="name" class="form-control">
+			{{ message('name') }}
+		</div>
+	
+		 <div class="form-group">
+			<label for="">Email</label>
+			<input type="text" name="email" class="form-control">
+			{{ message('email') }}
+		</div>
+		
+		<div class="form-group">
+			<label for="">Telefone</label>
+			<input type="text" name="phone" class="form-control">
+			{{ message('phone') }}
+		</div>	
+
+		<button type="submit" class="btn btn-success">Cadastrar</button>
+
+	</form>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'admin/master.html' %}
+
+{% block admin %}
+
+    <h2>Cadastro de posts</h2>
+    
+    <hr>
+
+    {{ message('message') }}
+
+    <form action="/admin/post/store" method="post">
+
+         <div class="form-group">
+            <label for="">Title</label>
+            <input type="text" name="title" class="form-control" placeholder="Titulo do post">
+            {{ message('title') }}
+        </div>
+
+        <div class="form-group">
+            <label for="">Slug</label>
+            <input type="text" name="slug" class="form-control" placeholder="Slug do post">
+            {{ message('slug') }}
+        </div>
+    
+         <div class="form-group">
+            <label for="">Description</label>
+            <textarea name="description" class="form-control" rows="10"></textarea>
+            {{ message('description') }}
+        </div>
+
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+
+    </form>
+
+{% endblock %}
